@@ -10,12 +10,17 @@ public class Bandit implements Comparable<Bandit>{
     List<Integer> values;
     long init;
     List<Integer> usedValues;
+    int index;
 
-    public Bandit(List<Integer> values, int init){
+    public Bandit(List<Integer> values, int init, int index){
         this.init = init;
-        this.values = new ArrayList<>();
+        this.values = values;
+        this.index = index;
         usedValues = new ArrayList<>();
-        this.values.addAll(values);
+    }
+
+    public int getIndex(){
+        return  index;
     }
 
     public double getMean() {
@@ -34,6 +39,7 @@ public class Bandit implements Comparable<Bandit>{
     public void updateUsedValues(){
         int usedValuesSize = usedValues.size();
         usedValues.add(values.get(usedValuesSize));
+        getMean();
     }
 
     public long getUtility(){
@@ -59,9 +65,15 @@ public class Bandit implements Comparable<Bandit>{
                 : 0;
     }
 
+    private int compareToIndice(int other){
+        return this.index > other ? 1 : -1;
+    }
+
     @Override
     public int compareTo(Bandit o) {
         int startComparison = compare(o.getMean(), this.getMean());
+        if (startComparison == 0)
+            return compareToIndice(o.getIndex());
         return startComparison;
     }
 }

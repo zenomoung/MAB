@@ -23,10 +23,10 @@ public class GloutonTest {
         List<Integer> b2 = Arrays.asList(0,1,0,1,0,1);
         List<Integer> b3 = Arrays.asList(1,1,0,0,1,1,0,0,1,1);
         List<Integer> b4 = Arrays.asList(0,0,1,1,0,0,1,1,0,0);
-        Bandit bandit1 = new Bandit(b1,init);
-        Bandit bandit2 = new Bandit(b2,init);
-        Bandit bandit3 = new Bandit(b3,init);
-        Bandit bandit4 = new Bandit(b4,init);
+        Bandit bandit1 = new Bandit(b1,init, 1);
+        Bandit bandit2 = new Bandit(b2,init, 2);
+        Bandit bandit3 = new Bandit(b3,init, 3);
+        Bandit bandit4 = new Bandit(b4,init, 4);
         bandits.add(bandit1);
         bandits.add(bandit2);
         bandits.add(bandit3);

@@ -8,7 +8,7 @@ import java.util.List;
 public class Glouton {
 
     public List<Bandit> ComputeGloutonAlgorithm(int actions, List<Bandit> bandits){
-        for (int i = 0; i < actions; i++){
+        for (int i = 1; i <= actions; i++){
             Bandit bandit = getHighestMean(bandits);
             bandit.updateUsedValues();
         }
