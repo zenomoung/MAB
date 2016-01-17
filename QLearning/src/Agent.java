@@ -49,13 +49,13 @@ public class Agent {
     public int getNextAction(int currentState)
     {
         int action = 0;
-        boolean choiceIsValid = false;
+        boolean isValid = false;
 
-        while(choiceIsValid == false)
+        while(isValid == false)
         {
             action = new Random().nextInt(rewards.size());
             if(rewards.get(currentState).get(action) > -1){
-                choiceIsValid = true;
+                isValid = true;
             }
         }
         return action;
