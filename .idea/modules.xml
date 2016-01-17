@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MAB.iml" filepath="$PROJECT_DIR$/MAB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Glouton/Glouton.iml" filepath="$PROJECT_DIR$/Glouton/Glouton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QLearning/QLearning.iml" filepath="$PROJECT_DIR$/QLearning/QLearning.iml" />
     </modules>
   </component>
 </project>

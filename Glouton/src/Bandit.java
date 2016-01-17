@@ -3,7 +3,6 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.apache.log4j.LogManager;
 
-
 /**
  * Created by fredericmoungpacrijanot on 15/01/2016.
  */
