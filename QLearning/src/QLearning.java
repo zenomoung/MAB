@@ -40,8 +40,6 @@ public class QLearning {
     private int computeReward(int state, int action)
     {
         return (int)(agent.getStateActionValue(state,action) + alpha * (agent.getReward(state, action) + gamma * agent.getMaximumStateAction(state) - agent.getStateActionValue(state,action)));
-
-        //return (int)(agent.getReward(state, action) + gamma * agent.getMaximumStateAction(state, action));
     }
 
     private void takeAction(int currentState){
